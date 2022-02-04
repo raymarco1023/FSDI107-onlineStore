@@ -1,0 +1,7 @@
+.navBar h1{
+    color: black;
+    text-align: center;
+    box-shadow: 2px 2px 7px 1px #1C6EA4;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
