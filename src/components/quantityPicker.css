@@ -1,12 +1,16 @@
 .quantity-picker {
-  border: 1px solid #aaa;
-  border-radius: 2px;
+  
+  border-radius: 5px;
+  width: 100px;
 
     
 }
 
 .quantity-picker button{
     margin: 0 5px;
+    padding: 0px 10px;
+        
+    
 }
 
 .quantity-picker label{

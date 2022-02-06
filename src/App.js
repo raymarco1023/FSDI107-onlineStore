@@ -3,6 +3,8 @@ import Footer from "./components/footer";
 import NavBar from "./components/navBar";
 import Catalog from "./components/catalog";
 import Product from "./components/product";
+import About from "./components/about";
+import ToDo from "./components/toDo";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -10,10 +12,14 @@ import "bootstrap/dist/js/bootstrap.min.js";
 function App() {
   return (
     <div className="App">
-      <h1>Natural Healing Food</h1>
+      <h1>Party Hackers</h1>
+      <p>Let us do all the party hacking, so you can enjoy the party!</p>
+      <About />
       <NavBar></NavBar>
 
       <Catalog></Catalog>
+
+      <ToDo />
 
       <Footer></Footer>
     </div>
