@@ -1,31 +1,31 @@
 var catalog = [
   {
     _id: "1",
-    title: "kjfjfk",
-    image: "test1.png",
+    title: "Ballons",
+    image: "ballons.jpeg",
     price: 12.0,
-    category: "friiut",
+    category: "Decoration",
   },
   {
     _id: "2",
-    title: "fjjfk",
-    image: "test1.png",
+    title: "Part Blowouts",
+    image: "partyblowout.jpeg",
     price: 20.0,
-    category: "friiut",
+    category: "Misc",
   },
   {
     _id: "3",
-    title: "fjjfk",
-    image: "test1.png",
+    title: "partyhats",
+    image: "partyhats.jpeg",
     price: 2.0,
-    category: "friiut",
+    category: "Hats",
   },
   {
     _id: "4",
-    title: "fjjfk",
-    image: "test1.png",
+    title: "Red Cups",
+    image: "red-cups.jpeg",
     price: 23.0,
-    category: "friiut",
+    category: "Drinks",
   },
 ];
 

@@ -9,10 +9,6 @@ const ToDo = () => {
     let allTodos = [...list];
     allTodos.push(text);
     setList(allTodos);
-
-    let allTodos = list;
-    allTodos.push(text);
-    setList(allTodos);
   };
 
   const handleText = (e) => {

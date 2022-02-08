@@ -11,13 +11,13 @@ const Product = (props) => {
   };
 
   const getTotal = () => {
-    let total = quantity * props.data.total;
+    let total = quantity * props.data.price;
     return "$" + total.toFixed(2);
   };
 
   return (
     <div className="product">
-      <img src="https://picsum.photos/200/300" alt="Product" />
+      <img src={"/image/" + props.data.image} alt="Product" />
       <h5>{props.data.title}</h5>
       <div className="priceTotal">
         <label className="total">{getTotal()}</label>
