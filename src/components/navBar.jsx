@@ -1,11 +1,15 @@
+import { Link } from "react-router-dom";
 import "./navBar.css";
+import { useContext } from "react";
+import storeContext from "../store/storeContext";
 
 const NavBar = () => {
+  const { cart, user } = useContext(storeContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="/#">
-          Navbar
+          NavBar
         </a>
         <button
           className="navbar-toggler"
@@ -21,68 +25,26 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/#">
+              <Link className="nav-link active" aria-current="page" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">
-                Link
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="/#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a className="dropdown-item" href="/#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
+              <Link className="nav-link" to="/catalog">
+                Catalog
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="/#"
-                tabIndex="-1"
-                aria-disabled="true"
-              >
-                Disabled
-              </a>
+              <Link className="nav-link" to="/about" tabIndex="1">
+                About
+              </Link>
             </li>
           </ul>
           <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <Link className="btn btn-outline-light" to="/cart">
+              <span className="badge bg-primary">{cart.length}&nbsp;</span>
+              View Cart
+            </Link>
           </form>
         </div>
       </div>
@@ -91,3 +53,8 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+//create a cart component
+// present a simple h1
+
+// show the cart on cart url(setup the route on app.js)

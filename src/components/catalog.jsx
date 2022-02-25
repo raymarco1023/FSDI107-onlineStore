@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import "./catalog.css";
 import Product from "./product";
 import DataService from "../services/dataServices";
+import Todo from "./toDo";
 
 const Catalog = () => {
   const [products, setProducts] = useState([]);
