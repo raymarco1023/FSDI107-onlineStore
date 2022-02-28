@@ -10,11 +10,11 @@ const Catalog = () => {
 
   // create loadData functionhere
 
-  const loadData = () => {
+  const loadData = async () => {
     //console.log("component loaded");
 
     let service = new DataService();
-    let data = service.getCatalog();
+    let data = await service.getCatalog();
     console.log(data);
     setProducts(data);
   };
@@ -22,7 +22,7 @@ const Catalog = () => {
   // when the component loads
   useEffect(() => {
     loadData();
-  });
+  }, []);
 
   /**
    * create an state variable (products)

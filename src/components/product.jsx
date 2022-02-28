@@ -6,8 +6,7 @@ import storeContext from "../store/storeContext";
 
 const Product = (props) => {
   const [quantity, setQuantity] = useState(1);
-  const { addProductToCart, removeProductFromCart } =
-    useContext(storeContext).addProductToCart;
+  const { addProductToCart, removeProductFromCart } = useContext(storeContext);
   const onQuantityChange = (value) => {
     console.log("qnty changed", value);
     setQuantity(value);
@@ -20,11 +19,11 @@ const Product = (props) => {
 
   const pushToCart = () => {
     console.log("Push to cart", props.data.title);
-    let prodToCart = {
+    let product = {
       ...props.data,
       quantity: quantity,
     }; //all of the contents in props.data will be here and quantity
-    addProductToCart(prodToCart);
+    addProductToCart(product);
   };
 
   return (

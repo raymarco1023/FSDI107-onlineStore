@@ -24,3 +24,8 @@
     -moz-border-radius: 13px 13px 13px 13px;
     border-radius: 13px 13px 13px 13px; 
 }
+
+.button {
+    background-color: black;
+    color: white;
+}
